@@ -120,7 +120,7 @@
 			<div class="articleName">
 				Facebook
 			</div>
-			<p>faceboo</p>
+			<p>facebook</p>
 		</div>
 		<div class="article">
 			<div class="articleName">
