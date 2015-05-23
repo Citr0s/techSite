@@ -18,9 +18,9 @@
 				</div>
 				<div class="menu floatRight">
 					<ul>
-						<li><a href="http://{{ $_SERVER['HTTP_HOST'] }}{{ $_SERVER['REQUEST_URI'] }}">HOME</a></li>
+						<li><a href="/">HOME</a></li>
 						<li><a href="">CATEGORIES</a></li>
-						<li><a href="http://{{ $_SERVER['HTTP_HOST'] }}{{ $_SERVER['REQUEST_URI'] }}login">LOGIN</a></li>
+						<li><a href="/login">LOGIN</a></li>
 						<li><a href="">REGISTER</a></li>
 					</ul>
 				</div>
