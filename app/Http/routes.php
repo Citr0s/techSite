@@ -14,6 +14,7 @@
 //Route::get('/', 'WelcomeController@index');
 
 Route::get('/', 'IndexController@index');
+Route::get('/{id}', 'IndexController@show');
 
 Route::get('login', 'LoginController@index');
 

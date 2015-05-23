@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>{{ $siteName }}</title>
+	<title>techSite</title>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
@@ -45,7 +45,7 @@
 			</div>
 			<div id="footer">
 				<div class="container">
-					<p>&copy; COPYRIGHT <a href="">{{ strtoupper($siteName) }}</a> 2015<br />
+					<p>&copy; COPYRIGHT <a href="">TECHSITE</a> 2015<br />
 					DESIGNED AND DEVELOPED BY <a href="http://miloszdura.com">MILOSZ DURA</a></p>
 				</div>
 			</div>

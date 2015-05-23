@@ -1,5 +1,9 @@
 <?php namespace App\Http\Controllers;
 
+use App\Article;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
 class IndexController extends Controller {
 
 	/**
@@ -7,8 +11,7 @@ class IndexController extends Controller {
 	 *
 	 * @return void
 	 */
-	public function __construct()
-	{
+	public function __construct() {
 		$this->middleware('guest');
 	}
 
@@ -17,10 +20,15 @@ class IndexController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-		$siteName = 'techSite';
-		return view('index')->with('siteName', $siteName);
-	}
+	public function index(){
+		$articles = Article::all();
 
+		return view('index')->with('articles', $articles);
+
+	}
+	public function show($id){
+		$article = Article::findOrFail($id);
+
+		return view('show')->with('article', $article);
+	}
 }
