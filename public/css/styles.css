@@ -46,6 +46,21 @@ body{
 	/*overflow-x:hidden;*/
 	margin-bottom:50px;
 }
+input{
+	transition:outline .3s;
+}
+input:focus{
+	outline:2px solid #3498db;
+}
+a{
+	color:#2980b9;
+	text-decoration:none;
+	transition:color .3s;
+}
+a:hover{
+	color:#236FA0;
+	text-decoration:none;
+}
 #wrapper{
 	margin:0px auto;
 	width:100%;
@@ -127,6 +142,35 @@ body{
 	width:100%;
 	max-width:1100px;
 	min-width:300px;
+}
+.wideBox{
+	background-color:#fff;
+	box-shadow:1px 0px 1px rgba(0, 0, 0, 0.3);
+}
+.wideBox h1{
+	padding:15px;
+	font-size:45px;
+	font-weight:300;
+}
+.wideBox input{
+	margin:15px;
+	padding:10px;
+}
+.wideBox button{
+	margin:15px;
+	padding:12px 15px;
+	background-color:#2980b9;
+	border:none;
+	color:#fff;
+	font-size:15px;
+	transition:background-color .3s;
+}
+.wideBox button:hover{
+	background-color:#236FA0;
+}
+.wideBox .loginTips{
+	padding:15px;
+	font-size:14px;
 }
 .container{
 	margin:0px auto;
@@ -218,6 +262,7 @@ body{
 	margin:15px;
 	font-size:16px;
 	width:83%;
+	transition:outline .3s;
 }
 .rightContainer .article input:focus{
 	outline:2px solid #3498db;
@@ -285,6 +330,10 @@ body{
 }
 .rightContainer .article .title:hover{
 	color:#2980b9;
+}
+.rightContainer p{
+	padding:15px;
+	padding-top:0px;
 }
 .share .head{
 	border-bottom:2px solid #ccc;
