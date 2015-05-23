@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{ $siteName }}</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/styles.css">
@@ -23,7 +24,18 @@
 						<li><a href="">REGISTER</a></li>
 					</ul>
 				</div>
+				<div class="floatRight">
+					<div id="hamburger" class="hamburger"><a href="#">&equiv;</a></div>
+				</div>
 				<div class="clear"></div>
+				<div id="menu-small" class="menu-small">
+					<ul>
+						<li><a href="">HOME</a></li>
+						<li><a href="">CATEGORIES</a></li>
+						<li><a href="">LOGIN</a></li>
+						<li><a href="">REGISTER</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div id="mainContainer">
@@ -154,11 +166,12 @@
 			</div>
 			<div id="footer">
 				<div class="container">
-					&copy; COPYRIGHT <a href="">{{ strtoupper($siteName) }}</a> 2015<br />
-					DESIGNED AND DEVELOPED BY <a href="http://miloszdura.com">MILOSZ DURA</a>
+					<p>&copy; COPYRIGHT <a href="">{{ strtoupper($siteName) }}</a> 2015<br />
+					DESIGNED AND DEVELOPED BY <a href="http://miloszdura.com">MILOSZ DURA</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script src="js/scripts.js"></script>
 </body>
 </html>

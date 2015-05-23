@@ -1,3 +1,36 @@
+@media screen and (max-width: 1130px) {
+	.rightContainer{
+		display:none;
+		width:0px;
+	}
+	.leftContainer{
+		float:none;
+		margin:0px auto;
+		width:100%;
+		max-width:750px;
+		min-width:300px;
+	}
+	.menu{
+		display:none;
+	}
+	.menu-small{
+		height:0px;
+	}
+}
+@media screen and (min-width: 1130px) {
+	.leftContainer{
+		float:left;
+	}
+	.hamburger{
+		display:none;
+	}
+	.menu-small{
+		display:none;
+	}
+	.menu-small{
+		height:0px;
+	}
+}
 *{
 	padding:0;
 	margin:0;
@@ -5,10 +38,12 @@
 html{
 	position:relative;
 	min-height: 100%;
+	/*overflow-x:hidden;*/
 }
 body{
 	font-family:'Lato';
 	background-color:#f1f1f1;
+	/*overflow-x:hidden;*/
 	margin-bottom:50px;
 }
 #wrapper{
@@ -46,6 +81,46 @@ body{
 #header .menu a:hover{
 	border-bottom:2px solid #2980b9;
 }
+#header .hamburger{
+	color:#333;
+	margin-right:10px;
+	padding:5px 10px;
+	font-size:50px;
+	font-weight:bold;
+	line-height:50px;
+}
+#header .hamburger a{
+	color:#333;
+	text-decoration:none;
+	transition:color .2s;
+}
+#header .hamburger a:hover{
+	color:#2980b9;
+}
+#header .menu-small{
+	margin-right:10px;
+	overflow:hidden;
+}
+#header .menu-small ul{
+	width:100%;
+}
+#header .menu-small li{
+	display:block;
+	list-style:none;
+}
+#header .menu-small a{
+	padding:18px 10px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#222222;
+	display:block;
+	font-size:14px;
+	transition:background-color .2s;
+}
+#header .menu-small a:hover{
+	background-color:#2980b9;
+	color:#fff;
+}
 #mainContainer{
 	margin:80px auto;
 	margin-bottom:0px;
@@ -59,9 +134,6 @@ body{
 	max-width:1100px;
 	min-width:300px;
 }
-.leftContainer{
-	float:left;
-}
 .rightContainer{
 	float:right;
 }
@@ -73,6 +145,10 @@ body{
 	min-width:300px;
 	background-color:#fff;
 	box-shadow:1px 0px 1px rgba(0, 0, 0, 0.3);
+	overflow:hidden;
+}
+.leftContainer .article .thumbnail img{
+	width:100%;
 }
 .leftContainer .article .title{
 	font-size:45px;
@@ -255,6 +331,9 @@ body{
 	font-size:10px;
 	color:#666;
 	padding:15px 0px;
+}
+#footer .container p{
+	padding:0px 15px;
 }
 #footer a{
 	color:#888;
