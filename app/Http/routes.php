@@ -14,12 +14,13 @@
 //Route::get('/', 'WelcomeController@index');
 
 Route::get('/', 'IndexController@index');
-Route::get('/create', 'IndexController@create');
-Route::get('/{id}', 'IndexController@show');
-Route::post('/', 'IndexController@store');
-
 
 Route::get('login', 'LoginController@index');
+
+Route::get('/create', 'IndexController@create');
+Route::get('/{id}', 'IndexController@show');
+
+Route::post('/', 'IndexController@store');
 
 //Route::get('home', 'HomeController@index');
 
