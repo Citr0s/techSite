@@ -26,7 +26,6 @@ class IndexController extends Controller {
 		$articles = Article::latest('published_at')->published()->get();
 
 		return view('index')->with('articles', $articles);
-
 	}
 
 	public function show($id){

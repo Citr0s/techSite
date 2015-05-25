@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use Auth;
+use Request;
+
 class LoginCOntroller extends Controller {
 
 	/**
@@ -19,8 +22,24 @@ class LoginCOntroller extends Controller {
 	 */
 	public function index()
 	{
-		$siteName = 'techSite';
-		return view('login')->with('siteName', $siteName);
+		return view('login');
 	}
+	public function logout()
+	{
+		Auth::logout();
 
+		return redirect('/');
+	}
+	public function auth()
+	{
+		$input = Request::all();
+
+		if (Auth::attempt(['email' => $input['email'], 'password' => $input['password']]))
+        {
+            return redirect('/');
+        }else{
+        	$errors = 'Data mismatch.';
+        	return view('login')->with('errors', $errors);
+        }
+	}
 }

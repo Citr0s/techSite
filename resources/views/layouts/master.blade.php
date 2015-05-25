@@ -20,8 +20,13 @@
 					<ul>
 						<li><a href="/">HOME</a></li>
 						<li><a href="">CATEGORIES</a></li>
-						<li><a href="/login">LOGIN</a></li>
-						<li><a href="">REGISTER</a></li>
+						@if (Auth::guest())
+							<li><a href="/login">LOGIN</a></li>
+							<li><a href="/register">REGISTER</a></li>
+						@else
+							<li><a href="/profile">{{ strtoupper(Auth::user()->username) }}</a></li>
+							<li><a href="/logout">LOGOUT</a></li>
+						@endif
 					</ul>
 				</div>
 				<div class="floatRight">

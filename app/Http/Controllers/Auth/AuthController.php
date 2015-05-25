@@ -39,7 +39,7 @@ class AuthController extends Controller {
     {
         if (Auth::attempt(['email' => $email, 'password' => $password]))
         {
-            return redirect()->intended('dashboard');
+            return redirect('/');
         }
     }
 

@@ -12,14 +12,18 @@
 */
 
 //Route::get('/', 'WelcomeController@index');
-//Route::get('home', 'HomeController@index');
+Route::get('home', 'HomeController@index');
 
 Route::get('/', 'IndexController@index');
-Route::get('login', 'LoginController@index');
+Route::get('/login', 'LoginController@index');
+Route::get('/register', 'RegisterController@index');
+Route::get('/logout', 'LoginController@logout');
 Route::get('/create', 'IndexController@create');
 Route::get('/{id}', 'IndexController@show');
 
 Route::post('/', 'IndexController@store');
+Route::post('/login', 'LoginController@auth');
+Route::post('/register', 'RegisterController@check');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
