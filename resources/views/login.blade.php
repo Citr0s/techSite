@@ -15,9 +15,11 @@
 		<div class="loginTips">
 			@if (count($errors) > 0)
 				<div class="danger">
-					<strong>Whoops!</strong> There were some problems with your input.<br><br>
+					<strong>Whoops!</strong> There were some problems with your input.<br /><br />
 					<ul>
-						<li>{{ $errors }}</li>
+					@foreach ($errors->all() as $error)
+						<li>{{ $error }}</li>
+					@endforeach
 					</ul>
 				</div>
 				<br />

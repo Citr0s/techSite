@@ -2,6 +2,7 @@
 
 use Auth;
 use Request;
+use Validator;
 
 class LoginCOntroller extends Controller {
 
@@ -32,14 +33,20 @@ class LoginCOntroller extends Controller {
 	}
 	public function auth()
 	{
+		
 		$input = Request::all();
 
-		if (Auth::attempt(['email' => $input['email'], 'password' => $input['password']]))
-        {
-            return redirect('/');
-        }else{
-        	$errors = 'Data mismatch.';
-        	return view('login')->with('errors', $errors);
-        }
+		if (Auth::attempt(['email' => $input['email'], 'password' => $input['password']])){
+        	return redirect('/');
+    	}
+
+		$rules = [
+        		'email' => 'required|min:3',
+        		'password' => 'required|min:3',
+        	];
+
+		$validator = Validator::make(Request::all(), $rules);
+
+		return view('login')->withErrors($validator);
 	}
 }
