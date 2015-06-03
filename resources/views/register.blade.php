@@ -9,7 +9,7 @@
 			<table>
 				<tr>
 					<td><label class="col-md-4 control-label">Name</label></td>
-					<td><input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="name"></td>
+					<td><input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="username"></td>
 				</tr>
 				<tr>
 					<td><label class="col-md-4 control-label">E-Mail Address</label></td>
